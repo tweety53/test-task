@@ -30,7 +30,10 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->phone_number = $request['phone_number'];
         $user->name = $request['name'];
-        $user->password = bcrypt($request['password']);
+        if(!empty($request['password'])){
+            $user->password = bcrypt($request['password']);
+        }
+
         $user->save();
     }
 }
