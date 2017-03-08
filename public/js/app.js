@@ -21312,6 +21312,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this.$http.put(this.url, this.user);
                 this.buttonStatus = 'Edit';
                 this.isNotEditable = true;
+                alert('You data has been changed successfully');
             }
         }
     }
