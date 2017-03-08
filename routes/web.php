@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/stest' , 'UserController@getProfile');
+
 Auth::routes();
 
-Route::resource('user', 'UserController');
+
+
+//Route::resource('user', 'UserController');
